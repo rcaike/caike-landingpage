@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -5,82 +6,171 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background-color: #f4f4f5;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background: linear-gradient(120deg, #2a2e35, #292c31);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-}
-.cta a {
-  background-color: #198754;
-  color: white;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.cta a:hover {
-  background-color: #157347;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .container {
-    padding: 20px 15px;
-  }
-
-  .cta a {
-    width: 100%;
-    padding: 14px 0;
-  }
-}
+/* Fundo geral da página */
 body {
   background: url(https://i.pinimg.com/736x/f5/c2/a9/f5c2a9299e700987a95d678632df8b79.jpg) no-repeat center center fixed;
   background-size: cover;
   color: white;
+  line-height: 1.6;
 }
 
-/* Para garantir legibilidade do texto com imagem de fundo */
+/* Containers com fundo escuro e opaco para legibilidade */
 header, .container, footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px;
-}
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.65); /* aumenta um pouco a opacidade */
+  padding: 20px 30px;
   border-radius: 12px;
+  margin: 20px auto;
+  max-width: 900px; /* define uma largura máxima */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabeçalho estilizado */
+header {
+  background: linear-gradient(120deg, #2a2e35, #292c31);
+  padding: 80px 20px 60px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+  font-size: 1.3rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Botão CTA */
+.cta a {
+  background-color: #198754;
   color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta a:hover {
+  background-color: #157347;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(21, 115, 71, 0.8);
+}
+
+/* Títulos das seções */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  color: #d1d5db; /* tom suave para não brigar com o branco */
+}
+
+/* Layout e margens dos containers */
+.container {
+  padding: 30px 20px;
+  margin-bottom: 40px;
+}
+
+/* Listas */
+.services ul,
+.testimonials ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services li,
+.testimonials li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  padding-left: 25px;
+  position: relative;
+}
+
+/* Marcadores personalizados */
+.services li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-weight: bold;
+  font-size: 1.5rem;
+  top: 0;
+}
+
+/* Portfólio - grade simples */
+.portfolio > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-item h3 {
+  margin-bottom: 15px;
+  color: #bbf7d0;
+}
+
+.portfolio-item p {
+  margin-bottom: 15px;
+  color: #e0e7ff;
+}
+
+.portfolio-item a {
+  color: #22c55e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.portfolio-item a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  padding: 25px 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .cta a {
+    width: 100%;
+    padding: 16px 0;
+  }
 }
