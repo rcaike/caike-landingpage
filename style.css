@@ -16,11 +16,11 @@ body {
 
 /* Containers com fundo escuro e opaco para legibilidade */
 header, .container, footer {
-  background-color: rgba(0, 0, 0, 0.65); /* aumenta um pouco a opacidade */
+  background-color: rgba(0, 0, 0, 0.65);
   padding: 20px 30px;
   border-radius: 12px;
   margin: 20px auto;
-  max-width: 900px; /* define uma largura máxima */
+  max-width: 900px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -70,11 +70,27 @@ header p {
 /* Títulos das seções */
 .section-title {
   font-size: 2rem;
-  margin-bottom: 25px;
   font-weight: 700;
   text-align: center;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-  color: #d1d5db; /* tom suave para não brigar com o branco */
+  color: #d1d5db;
+  margin-top: 60px;    /* espaçamento acima do título */
+  margin-bottom: 40px; /* espaçamento abaixo do título */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Linha decorativa abaixo do título */
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #198754;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 /* Layout e margens dos containers */
@@ -157,6 +173,7 @@ footer {
   opacity: 0.75;
   padding: 25px 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 40px;
 }
 
 /* Responsividade */
@@ -167,6 +184,8 @@ footer {
 
   .section-title {
     font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
 
   .cta a {
@@ -174,28 +193,3 @@ footer {
     padding: 16px 0;
   }
 }
-.section-title {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 20px;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-/* Linha decorativa abaixo do título */
-.section-title::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 3px;
-  background-color: #198754; /* Verde vibrante */
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
-}
-
-/* Espaçamento entre seções */
-.container + .container {
-  margin-top: 60px;
-}
-
