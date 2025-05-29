@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Caike - Desenvolvedor Web</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     * {
       margin: 0;
@@ -47,12 +47,14 @@
       color: #707d91;
     }
 
-    .services ul {
+    .services ul,
+    .testimonials ul {
       list-style: none;
       padding-left: 0;
     }
 
-    .services li {
+    .services li,
+    .testimonials li {
       margin-bottom: 10px;
     }
 
@@ -77,13 +79,43 @@
       padding: 20px;
       margin-top: 40px;
     }
+
+    /* Estilo para o portfólio */
+    .portfolio > div {
+      display: grid;
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-item h3 {
+      margin-bottom: 10px;
+    }
+
+    .portfolio-item p {
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item a {
+      color: #198754;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .portfolio-item a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Transformo ideias em sites rápidos e profissionais</h1>
-    <p>Criação de páginas eficientes</p>
+    <h1>Seu site pronto em até 5 dias. Profissional, bonito e que vende.</h1>
+    <p>Sou Caike. Faço sites rápidos, responsivos e prontos pra funcionar. Você me diz a ideia, e eu coloco no ar sem enrolação.</p>
   </header>
 
   <section class="container about">
@@ -92,23 +124,62 @@
   </section>
 
   <section class="container services">
-    <h2 class="section-title">O que eu ofereço</h2>
+    <h2 class="section-title">Por que escolher meus serviços?</h2>
     <ul>
-      <li>✅ Criação de páginas profissionais</li>
-      <li>✅ Design responsivo para celular</li>
-      <li>✅ Entrega rápida e preço justo</li>
+      <li>🚀 Seu site no ar em até 5 dias – agilidade sem perder qualidade</li>
+      <li>📱 Design responsivo – funciona perfeitamente no celular</li>
+      <li>🎯 Site objetivo – foca no que realmente importa pro seu cliente</li>
+      <li>🔒 100% seu – você tem total controle e pode editar futuramente</li>
+      <li>💬 Suporte direto comigo pelo WhatsApp</li>
+    </ul>
+  </section>
+
+  <section class="container portfolio">
+    <h2 class="section-title">Alguns dos meus projetos</h2>
+    <div>
+      <div class="portfolio-item">
+        <h3>Landing Page DeliveryX</h3>
+        <p>Site fictício para um app de delivery. Design moderno e responsivo.</p>
+        <a href="https://rcaike.github.io/deliveryx/" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Portfólio de Fotógrafa</h3>
+        <p>Modelo de site pessoal para profissionais criativos, com foco em imagens.</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Página de Apresentação Negócio Local</h3>
+        <p>Site de exemplo para pequenos negócios locais como barbearias, lojas e clínicas.</p>
+        <a href="#" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container testimonials">
+    <h2 class="section-title">O que dizem sobre meu trabalho</h2>
+    <ul>
+      <li>
+        <strong>Luciana M.</strong> — "Fiquei impressionada com a rapidez e a qualidade. Em menos de uma semana, meu site estava no ar e perfeito no celular!"
+      </li>
+      <li>
+        <strong>Rafael D.</strong> — "Caike foi super atencioso. Entregou exatamente o que eu precisava, e ainda me orientou depois da entrega."
+      </li>
+      <li>
+        <strong>Jéssica S.</strong> — "Ótimo custo-benefício. Meu site ficou bonito, leve e direto ao ponto. Recomendo!"
+      </li>
     </ul>
   </section>
 
   <section class="container cta">
     <h2 class="section-title">Fale comigo</h2>
     <p>Quer um site novo ou melhorar o seu? Me chama no WhatsApp agora mesmo!</p>
-    <a href="https://wa.me/61991505201" target="_blank">Solicitar orçamento</a>
+    <a href="https://wa.me/61991505201" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
   </section>
 
   <footer>
     <p>&copy; 2025 Caike. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
